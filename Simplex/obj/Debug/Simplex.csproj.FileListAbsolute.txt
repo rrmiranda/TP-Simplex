@@ -10,3 +10,9 @@ E:\1 - PARTICULAR\Projetos\Simplex\Simplex\obj\Debug\Simplex.frmPrincipal.resour
 C:\Users\rmiranda\Documents\GitHub\TP-Simplex\Simplex\bin\Debug\Simplex.exe.config
 C:\Users\rmiranda\Documents\GitHub\TP-Simplex\Simplex\obj\Debug\Simplex.exe
 C:\Users\rmiranda\Documents\GitHub\TP-Simplex\Simplex\obj\Debug\Simplex.pdb
+C:\Users\rmiranda\Documents\GitHub\TP-Simplex\Simplex\bin\Debug\Simplex.exe
+C:\Users\rmiranda\Documents\GitHub\TP-Simplex\Simplex\bin\Debug\Simplex.pdb
+C:\Users\rmiranda\Documents\GitHub\TP-Simplex\Simplex\obj\Debug\Simplex.csprojResolveAssemblyReference.cache
+C:\Users\rmiranda\Documents\GitHub\TP-Simplex\Simplex\obj\Debug\Simplex.frmPrincipal.resources
+C:\Users\rmiranda\Documents\GitHub\TP-Simplex\Simplex\obj\Debug\Simplex.Properties.Resources.resources
+C:\Users\rmiranda\Documents\GitHub\TP-Simplex\Simplex\obj\Debug\Simplex.csproj.GenerateResource.Cache
