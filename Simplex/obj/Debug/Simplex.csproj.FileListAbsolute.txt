@@ -1,0 +1,9 @@
+E:\1 - PARTICULAR\Projetos\Simplex\Simplex\bin\Debug\Simplex.exe.config
+E:\1 - PARTICULAR\Projetos\Simplex\Simplex\bin\Debug\Simplex.exe
+E:\1 - PARTICULAR\Projetos\Simplex\Simplex\bin\Debug\Simplex.pdb
+E:\1 - PARTICULAR\Projetos\Simplex\Simplex\obj\Debug\Simplex.csprojResolveAssemblyReference.cache
+E:\1 - PARTICULAR\Projetos\Simplex\Simplex\obj\Debug\Simplex.Properties.Resources.resources
+E:\1 - PARTICULAR\Projetos\Simplex\Simplex\obj\Debug\Simplex.csproj.GenerateResource.Cache
+E:\1 - PARTICULAR\Projetos\Simplex\Simplex\obj\Debug\Simplex.exe
+E:\1 - PARTICULAR\Projetos\Simplex\Simplex\obj\Debug\Simplex.pdb
+E:\1 - PARTICULAR\Projetos\Simplex\Simplex\obj\Debug\Simplex.frmPrincipal.resources
