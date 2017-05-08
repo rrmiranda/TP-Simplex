@@ -641,7 +641,7 @@ namespace Simplex
                     txtresultvalores.Text = txtresultvalores.Text+ Environment.NewLine + (Tabela[L, C] + "        ");
                 }
 
-
+                txtresultvalores.Clear();
                 txtresult.Text="RESPOSTAS:  Z = " + -(Tabela[0, 0]) + ";";
                 
                 for (int L = 0; L < ValorVariaveis.GetLength(0); L++)
