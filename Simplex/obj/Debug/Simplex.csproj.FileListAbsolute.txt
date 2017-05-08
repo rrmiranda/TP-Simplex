@@ -7,3 +7,6 @@ E:\1 - PARTICULAR\Projetos\Simplex\Simplex\obj\Debug\Simplex.csproj.GenerateReso
 E:\1 - PARTICULAR\Projetos\Simplex\Simplex\obj\Debug\Simplex.exe
 E:\1 - PARTICULAR\Projetos\Simplex\Simplex\obj\Debug\Simplex.pdb
 E:\1 - PARTICULAR\Projetos\Simplex\Simplex\obj\Debug\Simplex.frmPrincipal.resources
+C:\Users\rmiranda\Documents\GitHub\TP-Simplex\Simplex\bin\Debug\Simplex.exe.config
+C:\Users\rmiranda\Documents\GitHub\TP-Simplex\Simplex\obj\Debug\Simplex.exe
+C:\Users\rmiranda\Documents\GitHub\TP-Simplex\Simplex\obj\Debug\Simplex.pdb

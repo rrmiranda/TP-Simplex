@@ -22,7 +22,7 @@ namespace Simplex
         int Linha = 0;
         int cont = 0;
 
-        int[] VetProdutos;       //Receber valores do produto (30x1, 30x2, etc);
+        int[] VetProdutos;       //Receber valores do produto (30x1, 30x2, etc); etste
         string[] VetInequacao;   //Receber valores das inequações (>= ou <=) para criar variáveis auxiliares;
         int[,] MatRestricoes;    //Receber valores das inequações respectivas aos produtos (R1 = ..., R2 = ...,);
 
