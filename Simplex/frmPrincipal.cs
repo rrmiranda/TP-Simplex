@@ -587,6 +587,7 @@ namespace Simplex
             ValorVariaveis[0, aux] = variavel;
 
             txtresult.Text="Impressão dos novos valores das variáveis!";
+            txtresultvalores.Clear();
             for (int L = 0; L < ValorVariaveis.GetLength(0); L++)
             {
                 if(L>0)
@@ -627,22 +628,31 @@ namespace Simplex
             else
             {
                 txtfase.Text = "DEMONSTRAÇÃO TABELA";
-               
+                txtresultvalores.Clear();
                 for (int L = 0; L < Tabela.GetLength(0); L++)
                 {
-                    txtresultvalores.Text=" "+ Environment.NewLine +" ";
+                    if (L > 0)
+                    {
+                        txtresultvalores.Text = txtresultvalores.Text + Environment.NewLine;
+                    }
+                    if (L > 0)
+                   
                     for (int C = 0; C < Tabela.GetLength(1); C++)
                     txtresultvalores.Text = txtresultvalores.Text+ Environment.NewLine + (Tabela[L, C] + "        ");
                 }
 
 
                 txtresult.Text="RESPOSTAS:  Z = " + -(Tabela[0, 0]) + ";";
-                Console.WriteLine();
+                
                 for (int L = 0; L < ValorVariaveis.GetLength(0); L++)
                 {
-                    Console.WriteLine();
+                    if (L > 0)
+                    {
+                        txtresultvalores.Text = txtresultvalores.Text + Environment.NewLine;
+                    }
+                    
                     for (int C = 0; C < ValorVariaveis.GetLength(1); C++)
-                        Console.Write(ValorVariaveis[L, C] + "      |      ");
+                        txtresultvalores.Text = txtresultvalores.Text + (ValorVariaveis[L, C] + "      |      ");
                 }
                 
             }
