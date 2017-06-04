@@ -127,7 +127,7 @@
             this.btn_inserirPR.Location = new System.Drawing.Point(270, 21);
             this.btn_inserirPR.Name = "btn_inserirPR";
             this.btn_inserirPR.Size = new System.Drawing.Size(75, 23);
-            this.btn_inserirPR.TabIndex = 6;
+            this.btn_inserirPR.TabIndex = 3;
             this.btn_inserirPR.Text = "OK";
             this.btn_inserirPR.UseVisualStyleBackColor = true;
             this.btn_inserirPR.Click += new System.EventHandler(this.button2_Click);
@@ -146,7 +146,7 @@
             this.txtrest.Location = new System.Drawing.Point(164, 50);
             this.txtrest.Name = "txtrest";
             this.txtrest.Size = new System.Drawing.Size(54, 20);
-            this.txtrest.TabIndex = 2;
+            this.txtrest.TabIndex = 1;
             // 
             // label1
             // 
@@ -209,14 +209,14 @@
             this.txt_valorresultine.Location = new System.Drawing.Point(164, 105);
             this.txt_valorresultine.Name = "txt_valorresultine";
             this.txt_valorresultine.Size = new System.Drawing.Size(54, 20);
-            this.txt_valorresultine.TabIndex = 9;
+            this.txt_valorresultine.TabIndex = 10;
             // 
             // btn_inserir3
             // 
             this.btn_inserir3.Location = new System.Drawing.Point(270, 80);
             this.btn_inserir3.Name = "btn_inserir3";
             this.btn_inserir3.Size = new System.Drawing.Size(75, 23);
-            this.btn_inserir3.TabIndex = 8;
+            this.btn_inserir3.TabIndex = 9;
             this.btn_inserir3.Text = "Inserir";
             this.btn_inserir3.UseVisualStyleBackColor = true;
             this.btn_inserir3.Click += new System.EventHandler(this.btn_inserir3_Click);
@@ -235,14 +235,14 @@
             this.txt_valorine.Location = new System.Drawing.Point(164, 80);
             this.txt_valorine.Name = "txt_valorine";
             this.txt_valorine.Size = new System.Drawing.Size(54, 20);
-            this.txt_valorine.TabIndex = 6;
+            this.txt_valorine.TabIndex = 8;
             // 
             // btn_inserir2
             // 
             this.btn_inserir2.Location = new System.Drawing.Point(270, 55);
             this.btn_inserir2.Name = "btn_inserir2";
             this.btn_inserir2.Size = new System.Drawing.Size(75, 23);
-            this.btn_inserir2.TabIndex = 5;
+            this.btn_inserir2.TabIndex = 7;
             this.btn_inserir2.Text = "Inserir";
             this.btn_inserir2.UseVisualStyleBackColor = true;
             this.btn_inserir2.Click += new System.EventHandler(this.btn_inserir2_Click);
@@ -261,14 +261,14 @@
             this.txt_valorr.Location = new System.Drawing.Point(164, 55);
             this.txt_valorr.Name = "txt_valorr";
             this.txt_valorr.Size = new System.Drawing.Size(54, 20);
-            this.txt_valorr.TabIndex = 3;
+            this.txt_valorr.TabIndex = 6;
             // 
             // btn_inserir
             // 
             this.btn_inserir.Location = new System.Drawing.Point(270, 29);
             this.btn_inserir.Name = "btn_inserir";
             this.btn_inserir.Size = new System.Drawing.Size(75, 23);
-            this.btn_inserir.TabIndex = 2;
+            this.btn_inserir.TabIndex = 5;
             this.btn_inserir.Text = "Inserir";
             this.btn_inserir.UseVisualStyleBackColor = true;
             this.btn_inserir.Click += new System.EventHandler(this.btn_inserir_Click);
@@ -287,7 +287,7 @@
             this.txt_valorp.Location = new System.Drawing.Point(164, 29);
             this.txt_valorp.Name = "txt_valorp";
             this.txt_valorp.Size = new System.Drawing.Size(54, 20);
-            this.txt_valorp.TabIndex = 0;
+            this.txt_valorp.TabIndex = 4;
             // 
             // btn_calcular
             // 

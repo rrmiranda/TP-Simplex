@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpsBinding_ISimplex_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://tp-simplex-azure.azurewebsites.net/Simplex.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://tp-simplex-azure.azurewebsites.net/Simplex.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://tp-simplex-azure.azurewebsites.net/Simplex.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://tp-simplex-azure.azurewebsites.net/Simplex.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/TP_Simplex_Azure" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISimplex_Calcular_InputMessage">
+    <wsdl:part name="parameters" element="tns:Calcular" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_Calcular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalcularResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_CalcularSimplex_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalcularSimplex" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_CalcularSimplex_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalcularSimplexResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_CalculateDays_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateDays" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_CalculateDays_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateDaysResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_SetarTamanhoTabela_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetarTamanhoTabela" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_SetarTamanhoTabela_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetarTamanhoTabelaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_SetarValorTabela_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetarValorTabela" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_SetarValorTabela_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetarValorTabelaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_RetornarTabela_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetornarTabela" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_RetornarTabela_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetornarTabelaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_SetarTamanhoValorVariaveis_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetarTamanhoValorVariaveis" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_SetarTamanhoValorVariaveis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetarTamanhoValorVariaveisResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_SetarValorVariaveis_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetarValorVariaveis" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_SetarValorVariaveis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetarValorVariaveisResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_RetornarValorVariaveis_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetornarValorVariaveis" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_RetornarValorVariaveis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetornarValorVariaveisResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_SetarTamanhoMatRestricoes_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetarTamanhoMatRestricoes" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_SetarTamanhoMatRestricoes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetarTamanhoMatRestricoesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_SetarMatRestricoes_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetarMatRestricoes" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_SetarMatRestricoes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetarMatRestricoesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_RetornarMatRestricoes_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetornarMatRestricoes" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_RetornarMatRestricoes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetornarMatRestricoesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_RetornarValorMatRestricoes_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetornarValorMatRestricoes" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_RetornarValorMatRestricoes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetornarValorMatRestricoesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_RetornarTamMatRestricoes_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetornarTamMatRestricoes" />
+  </wsdl:message>
+  <wsdl:message name="ISimplex_RetornarTamMatRestricoes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetornarTamMatRestricoesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISimplex">
+    <wsdl:operation name="Calcular">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISimplex/Calcular" message="tns:ISimplex_Calcular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISimplex/CalcularResponse" message="tns:ISimplex_Calcular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalcularSimplex">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISimplex/CalcularSimplex" message="tns:ISimplex_CalcularSimplex_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISimplex/CalcularSimplexResponse" message="tns:ISimplex_CalcularSimplex_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateDays">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISimplex/CalculateDays" message="tns:ISimplex_CalculateDays_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISimplex/CalculateDaysResponse" message="tns:ISimplex_CalculateDays_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetarTamanhoTabela">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISimplex/SetarTamanhoTabela" message="tns:ISimplex_SetarTamanhoTabela_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISimplex/SetarTamanhoTabelaResponse" message="tns:ISimplex_SetarTamanhoTabela_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetarValorTabela">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISimplex/SetarValorTabela" message="tns:ISimplex_SetarValorTabela_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISimplex/SetarValorTabelaResponse" message="tns:ISimplex_SetarValorTabela_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornarTabela">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISimplex/RetornarTabela" message="tns:ISimplex_RetornarTabela_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISimplex/RetornarTabelaResponse" message="tns:ISimplex_RetornarTabela_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetarTamanhoValorVariaveis">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISimplex/SetarTamanhoValorVariaveis" message="tns:ISimplex_SetarTamanhoValorVariaveis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISimplex/SetarTamanhoValorVariaveisResponse" message="tns:ISimplex_SetarTamanhoValorVariaveis_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetarValorVariaveis">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISimplex/SetarValorVariaveis" message="tns:ISimplex_SetarValorVariaveis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISimplex/SetarValorVariaveisResponse" message="tns:ISimplex_SetarValorVariaveis_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornarValorVariaveis">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISimplex/RetornarValorVariaveis" message="tns:ISimplex_RetornarValorVariaveis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISimplex/RetornarValorVariaveisResponse" message="tns:ISimplex_RetornarValorVariaveis_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetarTamanhoMatRestricoes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISimplex/SetarTamanhoMatRestricoes" message="tns:ISimplex_SetarTamanhoMatRestricoes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISimplex/SetarTamanhoMatRestricoesResponse" message="tns:ISimplex_SetarTamanhoMatRestricoes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetarMatRestricoes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISimplex/SetarMatRestricoes" message="tns:ISimplex_SetarMatRestricoes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISimplex/SetarMatRestricoesResponse" message="tns:ISimplex_SetarMatRestricoes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornarMatRestricoes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISimplex/RetornarMatRestricoes" message="tns:ISimplex_RetornarMatRestricoes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISimplex/RetornarMatRestricoesResponse" message="tns:ISimplex_RetornarMatRestricoes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornarValorMatRestricoes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISimplex/RetornarValorMatRestricoes" message="tns:ISimplex_RetornarValorMatRestricoes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISimplex/RetornarValorMatRestricoesResponse" message="tns:ISimplex_RetornarValorMatRestricoes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornarTamMatRestricoes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISimplex/RetornarTamMatRestricoes" message="tns:ISimplex_RetornarTamMatRestricoes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISimplex/RetornarTamMatRestricoesResponse" message="tns:ISimplex_RetornarTamMatRestricoes_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISimplex" type="tns:ISimplex">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Calcular">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/Calcular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularSimplex">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/CalcularSimplex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateDays">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/CalculateDays" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetarTamanhoTabela">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/SetarTamanhoTabela" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetarValorTabela">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/SetarValorTabela" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornarTabela">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/RetornarTabela" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetarTamanhoValorVariaveis">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/SetarTamanhoValorVariaveis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetarValorVariaveis">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/SetarValorVariaveis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornarValorVariaveis">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/RetornarValorVariaveis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetarTamanhoMatRestricoes">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/SetarTamanhoMatRestricoes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetarMatRestricoes">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/SetarMatRestricoes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornarMatRestricoes">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/RetornarMatRestricoes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornarValorMatRestricoes">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/RetornarValorMatRestricoes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornarTamMatRestricoes">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/RetornarTamMatRestricoes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpsBinding_ISimplex" type="tns:ISimplex">
+    <wsp:PolicyReference URI="#BasicHttpsBinding_ISimplex_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Calcular">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/Calcular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularSimplex">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/CalcularSimplex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateDays">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/CalculateDays" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetarTamanhoTabela">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/SetarTamanhoTabela" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetarValorTabela">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/SetarValorTabela" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornarTabela">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/RetornarTabela" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetarTamanhoValorVariaveis">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/SetarTamanhoValorVariaveis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetarValorVariaveis">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/SetarValorVariaveis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornarValorVariaveis">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/RetornarValorVariaveis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetarTamanhoMatRestricoes">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/SetarTamanhoMatRestricoes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetarMatRestricoes">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/SetarMatRestricoes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornarMatRestricoes">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/RetornarMatRestricoes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornarValorMatRestricoes">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/RetornarValorMatRestricoes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornarTamMatRestricoes">
+      <soap:operation soapAction="http://tempuri.org/ISimplex/RetornarTamMatRestricoes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_ISimplex" binding="tns:BasicHttpBinding_ISimplex">
+      <soap:address location="http://tp-simplex-azure.azurewebsites.net/Simplex.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpsBinding_ISimplex" binding="tns:BasicHttpsBinding_ISimplex">
+      <soap:address location="https://tp-simplex-azure.azurewebsites.net/Simplex.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
